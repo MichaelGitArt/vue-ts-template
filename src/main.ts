@@ -6,7 +6,8 @@ import App from './App.vue'
 import router from './router'
 
 import '@mdi/font/css/materialdesignicons.css'
-import 'virtual:windi.css'
+import '@unocss/reset/tailwind.css'
+import 'virtual:uno.css'
 import './scss/main.scss'
 
 const app = createApp(App)

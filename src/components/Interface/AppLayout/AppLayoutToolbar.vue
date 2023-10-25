@@ -1,7 +1,3 @@
-<script setup lang="ts">
-// ...
-</script>
-
 <template>
   <VAppBar density="compact">
     <VContainer class="flex items-center py-0">
@@ -12,7 +8,7 @@
       </VToolbarTitle>
 
       <VMenu>
-        <template #activator="{props}">
+        <template #activator="{ props }">
           <VBtn
             density="comfortable"
             icon

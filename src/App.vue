@@ -1,17 +1,7 @@
 <script setup lang="ts">
-//
+import AppLayout from '@/components/Interface/AppLayout/AppLayout.vue'
 </script>
 
 <template>
-  <VApp>
-    <TheHeader />
-
-    <VMain>
-      <RouterView v-slot="{ Component:ViewComponent }">
-        <VFadeTransition :hide-on-leave="true">
-          <Component :is="ViewComponent" />
-        </VFadeTransition>
-      </RouterView>
-    </VMain>
-  </VApp>
+  <AppLayout />
 </template>

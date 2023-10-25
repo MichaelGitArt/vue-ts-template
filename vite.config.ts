@@ -1,13 +1,14 @@
 // @ts-ignore
 import { URL, fileURLToPath } from 'node:url'
 import path from 'path'
+
 import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import windi from 'vite-plugin-windicss'
 import vuetify from 'vite-plugin-vuetify'
 import autoImport from 'unplugin-auto-import/vite'
 import components from 'unplugin-vue-components/vite'
 import vueRouter from 'unplugin-vue-router/vite'
+import unoCSS from 'unocss/vite'
 
 export default defineConfig(({ mode }) => {
   process.env = { ...process.env, ...loadEnv(mode, process.cwd()) }
@@ -21,7 +22,7 @@ export default defineConfig(({ mode }) => {
           configFile,
         },
       }),
-      windi(),
+      unoCSS(),
       vueRouter({
         routesFolder: 'src/views',
         extensions: ['.vue'],
