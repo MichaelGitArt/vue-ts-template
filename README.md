@@ -4,7 +4,7 @@
 - vuetify
 - vue-router (unplugin-vue-router)
 - pinia
-- windicss
+- unocss
 - eslint
 - unplugin-auto-import
 - unplugin-vue-components
