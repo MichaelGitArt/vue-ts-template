@@ -15,9 +15,13 @@
     "paths": {
       "@/*": ["./src/*"],
     },
+    "types": [
+      "unplugin-vue-router/client"
+    ]
   },
   "include": [
-    "src/**/*.ts", "src/**/*.d.ts", "src/**/*.vue"
+    "src/**/*.ts", "src/**/*.d.ts", "src/**/*.vue",
+    "./typed-router.d.ts"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
