@@ -35,6 +35,8 @@ export default defineConfig(({ mode }) => {
           'pinia',
           {
             '@/utils/image-viewer': ['viewImage'],
+            'gitart-manage-vue-dialog': ['useGDialog', 'useDialogConfirm', 'useDialogReturnData'],
+            'gitart-vue-notify': ['useNotify'],
           },
         ],
         dts: 'src/auto-imports.d.ts',
@@ -43,6 +45,9 @@ export default defineConfig(({ mode }) => {
         dts: 'src/components.d.ts',
       }),
     ],
+    server: {
+      port: 3050,
+    },
     resolve: {
       alias: {
         '@': fileURLToPath(new URL('./src', import.meta.url)),

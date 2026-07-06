@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { VApp } from 'vuetify/components'
+import { GDialogSpawn } from 'gitart-manage-vue-dialog'
+import { NotifySpawn } from 'gitart-vue-notify'
+import AppToast from '@/components/Interface/AppToast.vue'
 
 import { useLayout } from '@/composables/layout'
 
@@ -19,6 +22,19 @@ const {
         </Transition>
       </RouterView>
     </Component>
+
+    <GDialogSpawn />
+    <NotifySpawn>
+      <template #item="{ message, type, close, progress }">
+        <AppToast
+          class="mb-3"
+          :message="message"
+          :type="type"
+          :progress="progress"
+          @close="close()"
+        />
+      </template>
+    </NotifySpawn>
   </VApp>
 </template>
 

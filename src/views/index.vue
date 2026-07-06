@@ -1,5 +1,16 @@
 <script setup lang="ts">
+import ExampleDialog from '@/components/Interface/ExampleDialog.vue'
 
+const notify = useNotify()
+const dialog = useGDialog()
+
+function showNotification() {
+  notify.success('This is a notification powered by gitart-vue-notify!')
+}
+
+function openDialog() {
+  dialog.addDialog(ExampleDialog)
+}
 </script>
 
 <template>
@@ -8,7 +19,7 @@
       Home
     </div>
 
-    <div class="flex gap-4">
+    <div class="flex gap-4 mb-6">
       <VBtn
         color="primary"
         to="/"
@@ -27,6 +38,16 @@
         <VIcon end>
           mdi-link
         </VIcon>
+      </VBtn>
+    </div>
+
+    <div class="flex gap-4">
+      <VBtn color="secondary" @click="showNotification">
+        Show Notification
+      </VBtn>
+
+      <VBtn color="secondary" @click="openDialog">
+        Open Dialog
       </VBtn>
     </div>
   </div>

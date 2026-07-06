@@ -13,8 +13,10 @@ declare module 'vue' {
   export interface GlobalComponents {
     AppLayout: typeof import('./components/Interface/AppLayout/AppLayout.vue')['default']
     AppLayoutToolbar: typeof import('./components/Interface/AppLayout/AppLayoutToolbar.vue')['default']
+    AppToast: typeof import('./components/Interface/AppToast.vue')['default']
     DefaultLayout: typeof import('./components/Interface/Layouts/DefaultLayout/DefaultLayout.vue')['default']
     EmptyLayout: typeof import('./components/Interface/Layouts/EmptyLayout/EmptyLayout.vue')['default']
+    ExampleDialog: typeof import('./components/Interface/ExampleDialog.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
