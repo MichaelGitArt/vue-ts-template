@@ -11,9 +11,7 @@ declare module 'vue' {
     AppLayoutToolbar: typeof import('./components/Interface/AppLayout/AppLayoutToolbar.vue')['default']
     DefaultLayout: typeof import('./components/Interface/Layouts/DefaultLayout/DefaultLayout.vue')['default']
     EmptyLayout: typeof import('./components/Interface/Layouts/EmptyLayout/EmptyLayout.vue')['default']
-    HomeLayout: typeof import('./components/Interface/Layouts/EmptyLayout/HomeLayout.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    TheHeader: typeof import('./components/Interface/TheHeader.vue')['default']
   }
 }

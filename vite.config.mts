@@ -8,7 +8,6 @@ import vuetify from 'vite-plugin-vuetify'
 import autoImport from 'unplugin-auto-import/vite'
 import components from 'unplugin-vue-components/vite'
 import vueRouter from 'unplugin-vue-router/vite'
-import unoCSS from 'unocss/vite'
 
 export default defineConfig(({ mode }) => {
   process.env = { ...process.env, ...loadEnv(mode, process.cwd()) }
@@ -22,7 +21,6 @@ export default defineConfig(({ mode }) => {
           configFile,
         },
       }),
-      unoCSS(),
       vueRouter({
         routesFolder: 'src/views',
         extensions: ['.vue'],
