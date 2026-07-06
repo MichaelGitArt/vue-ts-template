@@ -7,7 +7,7 @@ declare module '*.vue' {
 }
 
 declare global {
-  const definePage: typeof import('unplugin-vue-router/runtime')['_definePage']
+  const definePage: typeof import('vue-router/runtime')['_definePage']
 }
 
 export {}
